@@ -108,8 +108,6 @@ class CharList extends Component {
 
     render() {
 
-        console.log(this.itemsRef)
-
         const {charList, loading, error, offset, newItemLoading, charEnded} = this.state;
         
         const items = this.renderItems(charList);

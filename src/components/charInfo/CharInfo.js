@@ -8,10 +8,11 @@ import Skeleton from '../skeleton/Skeleton';
 
 import './charInfo.scss';
 
-export default class CharInfo extends Component  {
+class CharInfo extends Component  {
 
+    
     state = {
-        char:null,
+        char: null,
         loading: false,
         error: false
     }
@@ -50,8 +51,9 @@ export default class CharInfo extends Component  {
     onCharLoaded = (char) => {
         this.setState({
             char, 
-            loading: false
+            loading: false,
         });
+        
     }
 
     onCharLoading = () => {
@@ -64,6 +66,10 @@ export default class CharInfo extends Component  {
             error: true
         });
     }
+
+    // static defaultProps = {
+    //     charId: 
+    // }
 
     render() {
         const {char, loading, error} = this.state;
@@ -87,7 +93,7 @@ export default class CharInfo extends Component  {
 const View = ({char}) => {
     const {name, description, thumbnail, homepage, wiki, comics} = char;
     let styleImg = {'objectFit':'cover'};
-    const comicsList = comics.length != [] ? comics.map((item, i) => {
+    const comicsList = comics.length !== [] ? comics.map((item, i) => {
         if(i > 9) return;
         return (
             <li key={i} className="char__comics-item">
@@ -131,6 +137,8 @@ const View = ({char}) => {
 }
 
 CharInfo.propTypes = {
-    charId: PropTypes.string
+    charId: PropTypes.number
 }
+
+export default CharInfo;
 

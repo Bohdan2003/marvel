@@ -15,6 +15,11 @@ export default class App extends Component {
         loading: true
     }
 
+    componentDidMount(){
+        // this.setState({selectedChar:1011197, loading: false});  
+        console.log('yes');
+    }
+
     onCharSelected = (id) => {
         this.setState({selectedChar:id, loading: false});
     }
