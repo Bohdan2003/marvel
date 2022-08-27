@@ -1,3 +1,20 @@
+.bunner {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px 0 45px;
+    background-color: #232222;
+    color:#fff;
+    font-size: 24px;
+    &__box{
+        display: flex;  
+        align-items: center;
+    }
+    &__img-avengers{
+        margin-right: 85px;
+    }
+}
 .comics {
     &__list {
         margin-top: 45px;
